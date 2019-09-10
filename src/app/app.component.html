@@ -1,0 +1,13 @@
+<div class="container-fluid">
+  <h1>TODO LIST</h1>
+  <div class="row">
+    <input [(ngModel)]="newLists" type="text" placeholder="Add-Todo" class="addText">
+    <button type="button" (click)="pushList()" class="btn btn-primary">Submit</button>
+  </div>
+  <ul>
+    <li *ngFor="let LISTS of lists; let INDEX = index">
+      {{LISTS}}
+      <span (click)="removeList(INDEX)">X</span>
+    </li>
+  </ul>
+</div>
